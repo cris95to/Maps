@@ -68,13 +68,13 @@ public class Mapainicio extends AppCompatActivity implements OnMapReadyCallback,
 
     }
 
-    @SuppressLint("MissingPermission")
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
         nMap = googleMap;
         //con estas lineas autoriza el activar la ubicacion del dispositivo en tiempo real
-        /*if (ActivityCompat.checkSelfPermission(this,
+        if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this,
@@ -89,7 +89,7 @@ public class Mapainicio extends AppCompatActivity implements OnMapReadyCallback,
             // for ActivityCompat#requestPermissions for more details.
             return;
 
-        }*/
+        }
 
         nMap.setMyLocationEnabled(true);
         LatLng we = new LatLng(4.60971, -74.08175);
